@@ -1,12 +1,15 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import About from './About'
-import '../index.css'
 import jpc from '../images/jpc.png'
+import wakeside from '../images/wakeside.png'
 import portfolio from '../images/old-portfolio.png'
 import css from '../images/cssboston.png'
 
-import * as palette from '../variables/Variables'
+import {FaReact} from 'react-icons/fa'
+import {SiStyledComponents, SiGatsby, SiGraphql} from 'react-icons/si'
+import {AiFillGithub, AiOutlineMail } from 'react-icons/ai'
+import {GrGithub, GrTwitter} from 'react-icons/gr'
+
 
 const Hero = () => {
 
@@ -33,7 +36,32 @@ const Hero = () => {
           About
         </WorkTitle>
       </Wrapper>
+      <Info 
+      style={{width: '90%'}}
+      active={active.name==='about'}>
+      I'm a passionate Front End Developer and lover of React. I have experience using modern HTML, CSS, and JavaScript to create responsive, user focused websites.<br></br><br></br>
+
+I also have a big desire to extend my knowledge to the backend and have dabbled with Nodejs and Express. I am particularly fond of GraphQL, interested in data visualization, and eager to learn about cloud computing.<br></br><br></br>
+
+When I'm not building webpages, I love to spend time with my dog, stay active boxing and playing in Co-Ed sports leagues, and improve my cooking and baking skills. I'm often spotted surfing, paddleboarding, or otherwise enjoying the water and the outdoors.<br></br><br></br>
+      </Info>
+      <HiddenSection active={active.name==='about'}>
+      <p style={{color: 'red'}}>SITE IS UNDER CONSTRUCTION</p>
+      </HiddenSection>
+      
+      <HiddenSection 
+      active={active.name==='about'}>
+        <Icon target="_blank" href="https://github.com/madihara"><AiFillGithub/></Icon>
+        <Icon target="_blank" to="madisonharadine@gmail.com"><AiOutlineMail/></Icon>
+        <Icon target="_blank" href="https://twitter.com/madisonharadine"><GrTwitter/></Icon>
+      </HiddenSection>
+      <HiddenSection active={active.name==='about'}>
+      Contact me at madisonharadine@gmail.com or (734)474-1893.
+      </HiddenSection>
       </ColumnWork>
+
+
+
       <ColumnWork 
         active={active.name === 'jpc'}
         onClick={() => setActive({
@@ -49,12 +77,40 @@ const Hero = () => {
           Work
         </WorkTitle>
       </Wrapper>
+      
       <Image 
         src={jpc} alt='Jpc Commercial Sewing Company' 
         active={active.name === 'jpc'}/>
       <Info active={active.name === 'jpc'}>
       A mobile responsive website designed and developed for a client. I was the sole designer, developer and worked closely with the owner as the content writer. I also used basic Photoshop to enhance the professionalism of the photos in his portfolio.
       </Info>
+      <HiddenSection
+        active={active.name === 'jpc'}>
+      <Column>
+        <FaReact/>
+        React
+      </Column>
+      <Column>
+        <SiGatsby/>
+        Gatsby
+      </Column>
+      <Column>
+        <SiGraphql/>
+        GraphQL
+      </Column>
+      <Column>
+        <SiStyledComponents/>
+        Styled Components
+      </Column>
+      <Column style={{alignSelf: 'flex-end'}}>
+      ContentfulCMS
+      </Column>
+      
+      </HiddenSection>
+      <Link 
+        target="_blank"
+        active={active.name ==='jpc'}
+        href='http://www.jpccustom.com'>View Live</Link>
       </ColumnWork>
       <ColumnWork 
         active={active.name === 'wakeside'}
@@ -73,11 +129,15 @@ const Hero = () => {
         </WorkTitle>
       </Wrapper>
       <Image 
-        src={jpc} alt='Wakeside marine company' 
+        src={wakeside} alt='Wakeside marine company' 
         active={active.name === 'wakeside'}/>
      <Info active={active.name === 'wakeside'}>
-      A mobile responsive website designed and developed for a client. I was the sole designer, developer and worked closely with the owner as the content writer. I also used basic Photoshop to enhance the professionalism of the photos in his portfolio.
+      A Gatsby site I am working on for a client.  It is in the early stages of development and mobile responsiveness has not been developed yet, but is coming.  I am in charge of design and development of the entire site and will be setting up a CMS of the client's choosing using GraphQL as the querying language.
       </Info>
+      <Link
+        target="_blank" 
+        active={active.name ==='wakeside'}
+        href='https://reverent-montalcini-a70fee.netlify.app/'>View Live</Link>
       </ColumnWork>
       <ColumnWork
         active={active.name === 'portfolio'} 
@@ -100,6 +160,10 @@ const Hero = () => {
       <Info active={active.name === 'portfolio'}>
       A mobile responsive site designed and developed using CSS Modules and React.
       </Info>
+      <Link
+        target="_blank" 
+        active={active.name ==='portfolio'}
+        href='https://codepen.io/madihara/pen/bGGPLBP'>View Live</Link>
       </ColumnWork>
       <ColumnWork
         active={active.name === 'css'} 
@@ -122,6 +186,10 @@ const Hero = () => {
       <Info active={active.name === 'css'}>
       While learning CSS I decided to take on a fun side project and make a pure CSS image of my dog.
       </Info>
+      <Link
+        target="_blank" 
+        active={active.name ==='css'}
+        href='https://codepen.io/madihara/pen/bGGPLBP'>CodePen</Link>
       </ColumnWork>
 
     </Main>
@@ -167,7 +235,7 @@ const ColumnWork = styled.section`
     width: 80%;
     justify-content: flex-start;
     align-items:center;
-   
+    cursor: auto;
   `}
 `
 const WorkTitle = styled.h1`
@@ -257,4 +325,42 @@ const Info = styled.section`
     width: 70%;
     padding: 20px 0;
   `}
+`
+
+const Link = styled.a`
+  display: none;
+  color: black;
+
+  ${({active}) => 
+    active &&
+    `display: block;`
+  }
+`
+
+const HiddenSection = styled.section`
+  display: none;
+  
+  
+
+  ${({active}) => 
+    active &&
+    `display: flex;
+    color: black;
+    `
+  }
+`
+const Column = styled.section`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+
+`
+const Icon = styled.a`
+  font-size: 2rem;
+  margin: 20px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
 `
