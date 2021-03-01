@@ -1,14 +1,15 @@
 import React, {useState} from 'react'
 
-import {Main, ColumnWork, WorkTitle, Description, Date, Wrapper, Image, Info, HiddenSection, Column, Link} from './MainSection'
+import {Main, ColumnWork, WorkTitle, Description, Date, Wrapper, Image, Info, HiddenSection, Column, Link} from './Styles'
 
 import {data} from '../variables/Data'
 
 
 const DataRender = () => {
-  const [active, setActive] = useState({name:'about'});
+  const [active, setActive] = useState({name:'Madison Haradine'});
   console.log(active)
   return(
+    <>
     <Main>
       {data.map((item, index)=>(
           <ColumnWork active={active.name === item.description}
@@ -17,12 +18,13 @@ const DataRender = () => {
           <div>
             <Date active={active.name === item.description}>{item.date}</Date>
           </div>
-          <Wrapper>
+          <Wrapper active={active.name === item.description}>
             <Description active={active.name === item.description}>{item.description}</Description>
             <WorkTitle active={active.name === item.description} >{item.title}</WorkTitle>`
 
           </Wrapper>
-          <Image active={active.name === item.description} src={item.image} />
+          {item.image ? <Image active={active.name === item.description} src={item.image} /> : null}
+          
           <Info active={active.name === item.description}>
             {item.info}
           </Info>
@@ -36,16 +38,18 @@ const DataRender = () => {
           {item.link ? (
             <Link
             target="_blank" 
-            active={active.name === item.name}
-            href={item.link.linkhref}>{item.link.description}</Link>
+            active={active.name === item.description}
+            href={item.link.linkhref}>{item.link.name}</Link>
           ) : null }
           </ColumnWork>
         ))}
+
+        
     </Main>
+    <div style={{color: 'red', position: 'absolute', bottom: '0', fontSize:'3rem'}}>SITE IS UNDER CONSTRUCTION</div>
+    </>
   )
 }
-
-
 
 
 export default DataRender
