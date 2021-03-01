@@ -173,3 +173,27 @@ export const Icon = styled.a`
   color: black;
   text-decoration: none;
 `
+
+
+export const Scroll = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: white;
+  display: flex;
+`
+
+export const Dot = styled.section`
+  height: 15px;
+  width: 15px;
+  margin: 10px 2px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid white; 
+
+  ${({active}) =>
+    active &&`
+      background-color: white;
+    `
+  }
+`

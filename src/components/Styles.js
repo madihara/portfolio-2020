@@ -178,3 +178,28 @@ const Icon = styled.a`
   color: black;
   text-decoration: none;
 `
+
+
+export const Scroll = styled.div`
+  position: absolute;
+  bottom: 30px;
+  left: 47%;
+  color: white;
+  display: flex;
+`
+
+export const Dot = styled.section`
+  height: 10px;
+  width: 10px;
+  margin: 10px 2px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid white; 
+  cursor: pointer;
+
+  ${({active}) =>
+    active &&`
+      background-color: white;
+    `
+  }
+`
