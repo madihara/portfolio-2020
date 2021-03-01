@@ -332,7 +332,7 @@ export const Info = styled.section`
   `}
 `
 
-const Link = styled.a`
+export const Link = styled.a`
   display: none;
   color: black;
 
@@ -342,7 +342,7 @@ const Link = styled.a`
   }
 `
 
-const HiddenSection = styled.section`
+export const HiddenSection = styled.section`
   display: none;
 
   ${({active}) => 
@@ -352,7 +352,7 @@ const HiddenSection = styled.section`
     `
   }
 `
-const Column = styled.section`
+export const Column = styled.section`
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
