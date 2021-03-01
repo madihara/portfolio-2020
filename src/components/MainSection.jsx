@@ -8,7 +8,7 @@ import css from '../images/cssboston.png'
 import {FaReact} from 'react-icons/fa'
 import {SiStyledComponents, SiGatsby, SiGraphql} from 'react-icons/si'
 import {AiFillGithub, AiOutlineMail } from 'react-icons/ai'
-import {GrGithub, GrTwitter} from 'react-icons/gr'
+import { GrTwitter} from 'react-icons/gr'
 
 
 const Hero = () => {
@@ -163,7 +163,7 @@ When I'm not building webpages, I love to spend time with my dog, stay active bo
       <Link
         target="_blank" 
         active={active.name ==='portfolio'}
-        href='https://codepen.io/madihara/pen/bGGPLBP'>View Live</Link>
+        href=''>No Longer Available</Link>
       </ColumnWork>
       <ColumnWork
         active={active.name === 'css'} 
@@ -198,7 +198,7 @@ When I'm not building webpages, I love to spend time with my dog, stay active bo
 
 export default Hero
 
-const Main = styled.div`
+export const Main = styled.div`
   height: 100vh;
   width: 97%;
   display: flex;
@@ -208,7 +208,7 @@ const Main = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-const ColumnWork = styled.section`
+export const ColumnWork = styled.section`
   width: 8%;
   height: 80vh;
   background: white;
@@ -238,7 +238,7 @@ const ColumnWork = styled.section`
     cursor: auto;
   `}
 `
-const WorkTitle = styled.h1`
+export const WorkTitle = styled.h1`
   color: black;
   -webkit-transform: rotate(270deg);   
   -moz-transform: rotate(270deg);
@@ -254,18 +254,21 @@ const WorkTitle = styled.h1`
     `
   }
 `
-const Description = styled.h3`
+export const Description = styled.h3`
   color: gray;
   -webkit-transform: rotate(270deg);   
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
-  /* transition-delay: .2s; */
+  transition-property: font-size;
+  transition-duration: .6s;
   font-weight: normal;
   font-size: .7rem;
   width: 200px;
   margin: 60px 0;
+
+  
 
   ${({active}) =>
     active &&`
@@ -275,17 +278,18 @@ const Description = styled.h3`
       -o-transform: rotate(0deg);
       transform: rotate(0deg);
       position: absolute;
-      top: 60px;
+      top: 40px;
       left: 40px;
       font-size: 3rem;
       font-family: 'Abril Fatface', cursive;
       width: 100%;
       margin: 0;
+      color: red;
     `
   }
   
 `
-const Date = styled(Description)`
+export const Date = styled(Description)`
   width: 80px;
   display: flex;
   margin: 20px;
@@ -298,24 +302,24 @@ const Date = styled(Description)`
     `
   }
 `
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   margin: 4rem 0;
 `
 
-const Image = styled.img`
+export const Image = styled.img`
   display: none;
-  transition: 6s;
 
   ${({active})=> 
   active &&`
     display: block;
-    height: 200px; 
+    width: 60%; 
 
   `}
 `
 
-const Info = styled.section`
+export const Info = styled.section`
   display: none;
+
 
   ${({active})=> 
   active &&`
@@ -324,6 +328,7 @@ const Info = styled.section`
     font-size: .8rem;
     width: 70%;
     padding: 20px 0;
+    // visibility: visible;
   `}
 `
 
@@ -339,8 +344,6 @@ const Link = styled.a`
 
 const HiddenSection = styled.section`
   display: none;
-  
-  
 
   ${({active}) => 
     active &&
