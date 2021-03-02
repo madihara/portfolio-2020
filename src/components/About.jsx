@@ -31,7 +31,7 @@ const Main = styled.div`
   width: 100%100vw;
 
   @media screen and (max-width: 900px) {
-    padding: 4rem 4rem 2rem 4rem;
+    padding: 3rem 4rem 0rem 4rem;
 
   }
 
@@ -50,8 +50,8 @@ export const Title = styled.h2`
   line-height: 8.5rem;
 
   @media screen and (max-width: 1300px) {
-    font-size: 3rem;
-    line-height: 2rem;
+    font-size: 3.2rem;
+    line-height: 2.9rem;
   }
   
   /* margin: 0; */
@@ -68,7 +68,7 @@ const SubTitle = styled.h4`
 
   @media screen and (max-width: 1300px) {
     font-size: .7rem;
-    letter-spacing: .3rem;
+    letter-spacing: 1px;
     padding: 1rem 0;
   }
 `

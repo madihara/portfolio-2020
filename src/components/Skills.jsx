@@ -94,7 +94,7 @@ export const Wrapper = styled.div`
     padding: 1rem 3rem;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    margin-bottom: .5rem;
   }
   
 `
@@ -119,10 +119,15 @@ const Paragraph = styled.p`
 
   @media screen and (max-width: 900px) {
     padding: 0;
+    font-size: 0.6rem;
   }
 `
 const Icon = styled.section`
   padding: 0 15px 15px 15px;
   font-size: 3rem;
+
+  @media screen and (max-width: 750px) {
+    font-size: 1.2rem;
+  }
 
 `

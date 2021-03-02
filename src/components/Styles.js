@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Main = styled.div`
   height: 100vh;
-  width: 97vw;
+  /* width: 97vw; */
   
   display: flex;
   flex-direction: row;
@@ -177,6 +177,10 @@ export const Link = styled.a`
   ${({active}) => 
     active &&
     `display: block;`
+  }
+
+@media screen and (max-width: 750px) {
+    font-size: 0.6rem;
   }
 `
 

@@ -35,6 +35,7 @@ const NavBar = styled.div`
   font-size: 0.9rem;
   width: 100%;
 
+
   @media screen and (max-width: 900px) {
     justify-content: center;
   
@@ -58,5 +59,11 @@ const Link = styled.a`
 
   &:hover{
     transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 750px) {
+    height: 24px;
+    width: 24px;
+    font-size: 18px;
   }
 `
