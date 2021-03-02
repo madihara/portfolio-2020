@@ -31,7 +31,7 @@ const Main = styled.div`
   width: 100%100vw;
 
   @media screen and (max-width: 900px) {
-    padding: 4.2rem 4rem 1rem 4rem;
+    padding: 4.2rem 1.3rem 1rem 1.3rem;
 
   }
 
@@ -50,8 +50,8 @@ export const Title = styled.h2`
   line-height: 8.5rem;
 
   @media screen and (max-width: 1300px) {
-    font-size: 4rem;
-    line-height: 2.9rem;
+    font-size: 5rem;
+    line-height: 4.2rem;
   }
   
   /* margin: 0; */
