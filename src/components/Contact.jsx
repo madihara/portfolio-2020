@@ -31,17 +31,28 @@ export default Contact
 const Wrapper = styled.section`
   padding: 4rem 6rem;
   color: white;
+
+  @media screen and (max-width: 750px) {
+    padding: 4rem 1rem;
+  }
 `
 
 const FlexItem = styled.div`
   display: flex;
   margin: 2rem 0;
+  flex-flow: row-wrap;
   
 
 `
 const Heading = styled.header`
   font-size: 2rem;
   padding: 0 1rem;
+
+  @media screen and (max-width: 750px) {
+    font-size: .8rem;
+  }
+
+  
 `
 
 const Copyright = styled.section`

@@ -187,8 +187,13 @@ export const HiddenSection = styled.section`
     active &&
     `display: flex;
     color: white;
+    flex-flow: row wrap;
     `
   }
+    /* @media screen and (max-width: 750px) {
+    flex-direction: column;
+    height: 100%;
+  } */
 `
 export const Column = styled.section`
   display: flex;

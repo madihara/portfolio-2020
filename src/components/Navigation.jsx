@@ -33,10 +33,11 @@ const NavBar = styled.div`
   justify-content: flex-end;
   padding: 2rem 2rem 0 0 ;
   font-size: 0.9rem;
+  width: 100%;
 
   @media screen and (max-width: 900px) {
     justify-content: center;
-    color: red;
+  
   }
 `
 

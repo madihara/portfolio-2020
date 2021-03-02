@@ -13,8 +13,8 @@ const About = () => {
       </FlexRow>
       
       <SubTitle>Freelance Frontend Developer</SubTitle>
-      <SubTitle style={{color:'red',fontSize: '1.4rem', padding:'0', margin: '0'}}>Site is currently under construction.</SubTitle>
-      <p style={{color: 'red', padding: '0', margin: '0'}}>Come back soon for more up to date info and mobile responsiveness</p>
+      {/* <SubTitle style={{color:'red',fontSize: '1.4rem', padding:'0', margin: '0'}}>Site is currently under construction.</SubTitle>
+      <p style={{color: 'red', padding: '0', margin: '0'}}>Come back soon for more up to date info and mobile responsiveness</p> */}
     </Main>
   )
 }
@@ -28,10 +28,12 @@ const Main = styled.div`
   justify-content: center;
   padding: 6rem;
   color: white;
+  width: 100%100vw;
 
-  /* @media screen and (max-width: 900px) {
-    background: red;
-  } */
+  @media screen and (max-width: 900px) {
+    padding: 4rem 4rem 2rem 4rem;
+
+  }
 
 `
 const FlexRow = styled.section`
@@ -48,8 +50,8 @@ export const Title = styled.h2`
   line-height: 8.5rem;
 
   @media screen and (max-width: 1300px) {
-    font-size: 6rem;
-    line-height: 5rem;
+    font-size: 3rem;
+    line-height: 2rem;
   }
   
   /* margin: 0; */
@@ -65,7 +67,8 @@ const SubTitle = styled.h4`
   letter-spacing: .8rem;
 
   @media screen and (max-width: 1300px) {
-    font-size: .8rem;
-    letter-spacing: .6rem;
+    font-size: .7rem;
+    letter-spacing: .3rem;
+    padding: 1rem 0;
   }
 `
