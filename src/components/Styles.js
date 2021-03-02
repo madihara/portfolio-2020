@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const Main = styled.div`
   height: 100vh;
   width: 97%;
+  
   display: flex;
   flex-direction: row;
   color: white;
@@ -35,7 +36,8 @@ export const ColumnWork = styled.section`
   ${({ active }) =>
     active &&
     `
-    width: 80%;
+    width: 80vw;
+    color: red;
     justify-content: flex-start;
     align-items:center;
     cursor: auto;
@@ -182,7 +184,7 @@ const Icon = styled.a`
 
 export const Scroll = styled.div`
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   left: 47%;
   color: white;
   display: flex;

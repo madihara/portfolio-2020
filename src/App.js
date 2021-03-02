@@ -1,16 +1,24 @@
+import About from './components/About'
+import Contact from './components/Contact'
+import Main from './components/Main'
+import NavBar from './components/Navigation'
+import Skills from './components/Skills'
 
-// import MainSection from './components/MainSection'
-import DataRender from './components/Main'
-import ScrollBar from './components/ScrollBar'
+
 
 
 function App() {
   return (
     <>
-    {/* <MainSection /> */}
-    <DataRender />
+     <NavBar />
+      <About />
+      <Skills/>
+      <Main />
+      <Contact/>
     </>
   );
 }
+
+
 
 export default App;

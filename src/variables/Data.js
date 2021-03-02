@@ -15,7 +15,7 @@ export const data = [
     date: 'Web Dev',
     description: 'Madison Haradine',
     title: 'About',
-    info: 'Frontend Developer',
+    info: "Freelance Developer",
     image: null,
   },
   {
@@ -80,5 +80,4 @@ export const data = [
       linkhref: 'https://codepen.io/madihara/pen/bGGPLBP'
     }
   },
-  
 ]

@@ -1,15 +1,18 @@
 import React, {useState} from 'react'
 
 import {Main, ColumnWork, WorkTitle, Description, Date, Wrapper, Image, Info, HiddenSection, Column, Link, Scroll, Dot} from './Styles'
+import {Title} from './About'
 
 import {data} from '../variables/Data'
 
 
 const DataRender = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(2);
   console.log(active)
   return(
     <>
+    <Title style={{textAlign:'center'}}>work</Title>
+    <div style={{position: 'relative'}}>
     <Main>
       {data.map((item, index)=>(
           <ColumnWork active={active === index}
@@ -56,6 +59,7 @@ const DataRender = () => {
     })}
     </Scroll>
     {/* <div style={{color: 'red', position: 'absolute', bottom: '0', fontSize:'3rem'}}>SITE IS UNDER CONSTRUCTION</div> */}
+    </div>
     </>
   )
 }
