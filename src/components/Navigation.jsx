@@ -1,13 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import {AiFillGithub, AiOutlineTwitter, AiOutlineMail} from 'react-icons/ai'
+
 const Navigation = () => {
   return(
     <NavBar>
-      about
-      skills
-      work
-      contact
+      <Link
+        target="_blank"
+        href="http://www.github.com/madihara">
+        <AiFillGithub />
+      </Link>
+      <Link 
+        target="blank"
+        href="http://www.twitter.com/madisonharadine">
+        <AiOutlineTwitter/>
+      </Link>
+      <Link
+        target="blank"
+        to="madisonharadine@gmail.com">
+        <AiOutlineMail />
+       </Link>
     </NavBar>
   )
 }
@@ -18,6 +31,21 @@ const NavBar = styled.div`
   color: white;
   display: flex;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 2rem 2rem 0 0 ;
   font-size: 0.9rem;
+`
+
+const Link = styled.a`
+  margin: 0 10px;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  background: #717171;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 `

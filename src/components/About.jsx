@@ -13,7 +13,8 @@ const About = () => {
       </FlexRow>
       
       <SubTitle>Freelance Frontend Developer</SubTitle>
-
+      <SubTitle style={{color:'red',fontSize: '1.4rem', padding:'0', margin: '0'}}>Site is currently under construction.</SubTitle>
+      <p style={{color: 'red', padding: '0', margin: '0'}}>Come back soon for more up to date info and mobile responsiveness</p>
     </Main>
   )
 }
