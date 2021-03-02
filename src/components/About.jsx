@@ -49,7 +49,7 @@ export const Title = styled.h2`
   color: white;
   line-height: 8.5rem;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 850px) {
     font-size: 5rem;
     line-height: 4.2rem;
   }
