@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import styled from 'styled-components'
 
 import {Main, ColumnWork, WorkTitle, Description, Date, Wrapper, Image, Info, HiddenSection, Column, Link, Scroll, Dot} from './Styles'
 import {Title} from './About'
@@ -59,6 +60,7 @@ const DataRender = () => {
       )
     })}
     </Scroll>
+    <Disclaimer>Visit this website on a laptop to view work. Mobile Responsiveness coming soon</Disclaimer>
     </div>
     </>
   )
@@ -66,3 +68,8 @@ const DataRender = () => {
 
 
 export default DataRender
+
+const Disclaimer = styled.p`
+  color: red;
+  padding: 2rem;
+`

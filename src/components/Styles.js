@@ -15,6 +15,7 @@ export const Main = styled.div`
   @media screen and (max-width: 750px) {
     flex-direction: column;
     height: 100%;
+    display: none;
   }
 `
 export const ColumnWork = styled.section`
