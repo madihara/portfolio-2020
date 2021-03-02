@@ -31,7 +31,7 @@ const Main = styled.div`
   width: 100%100vw;
 
   @media screen and (max-width: 900px) {
-    padding: 3rem 4rem 0rem 4rem;
+    padding: 4.2rem 4rem 1rem 4rem;
 
   }
 
@@ -50,7 +50,7 @@ export const Title = styled.h2`
   line-height: 8.5rem;
 
   @media screen and (max-width: 1300px) {
-    font-size: 3.2rem;
+    font-size: 4rem;
     line-height: 2.9rem;
   }
   
@@ -59,7 +59,7 @@ export const Title = styled.h2`
 
 const SubTitle = styled.h4`
   /* font-weight: normal; */
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #717171;
   padding: 2rem 0;
   margin: 0;
