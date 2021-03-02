@@ -43,7 +43,7 @@ const FlexRow = styled.section`
 `
 export const Title = styled.h2`
   font-family: 'Abril Fatface', cursive;
-  font-size: 10rem;
+  font-size: 9.5rem;
   padding: 0rem;
   margin:  0;
   color: white;

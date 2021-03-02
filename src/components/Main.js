@@ -72,4 +72,8 @@ export default DataRender
 const Disclaimer = styled.p`
   color: red;
   padding: 2rem;
+
+  @media screen and (min-width: 750px) {
+    display: none;
+  }
 `
