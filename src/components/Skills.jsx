@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from './Styles'
 
 
 import {GrGraphQl, GrGatsbyjs} from 'react-icons/gr'
@@ -11,14 +12,22 @@ import {AiFillHtml5, AiFillGithub} from 'react-icons/ai'
 const Skills = () => {
   return(
     <Wrapper>
-      <FlexItem>
+      <FlexItem style={{justifyContent: 'flex-start'}}>
         <Paragraph>
-          I am a frontend developer passionate about making mobile responsive websites with clean design. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+          I am a frontend developer passionate about making mobile responsive websites with clean design. I am entirely self-taught and pride myself on my discipline, motivation, and ability to transform a plain HTML document to a fully functioning, beautiful website.
         </Paragraph>
       
         <Paragraph>
-        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+          I am primarily a frontend javascript engineer, but dabble in backend technologies from time to time.  I love React, CSS-in-JS such as styled components, GraphQL, and playing around with CSS to find designs that are striking yet responsive.  I have a strong desire to learn d3js and expand my knowledge of node and databases. 
         </Paragraph>
+        <Paragraph>I am currently accepting freelance work as well as offers for fulltime positions.  Please get in touch with me via email, text or call, or reach out to me on twitter!
+
+        </Paragraph>
+        <Link
+          href='https://github.com/madihara/portfolio-2020'
+          target="_blank"
+          style={{display:'inline-block'}}
+        >GitHub Repo for this site</Link>
       </FlexItem>
       <FlexItem >
         <Icon>
@@ -79,6 +88,7 @@ export const Wrapper = styled.div`
   color: white;
   display: flex;
   justify-content: space-between;
+  
 `
 const FlexItem = styled.div`
   display: flex;

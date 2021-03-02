@@ -18,10 +18,17 @@ export const data = [
     title: 'JPC Sewing',
     info: "A mobile responsive website designed and developed for a client. I was the sole designer, developer and worked closely with the owner as the content writer. I also used basic Photoshop to enhance the professionalism of the photos in his portfolio.",
     image: jpc,
-    link: {  
-      name: 'View Live',
-      linkhref: 'http://www.jpcscustom.com'
-    },
+    links:
+    [ 
+      {  
+        name: 'View Live',
+        linkhref: 'http://www.jpcscustom.com'
+      },
+      {
+        name: 'GitHub Repo',
+        linkhref:'https://github.com/madihara/jpc-llc'
+      },
+    ],
     icons: [
       {
         name: 'React',
@@ -51,17 +58,29 @@ export const data = [
     title: 'WakeSide Marine',
     info: "A Gatsby site I am working on for a client.  It is in the early stages of development and mobile responsiveness has not been developed yet, but is coming.  I am in charge of design and development of the entire site and will be setting up a CMS of the client's choosing using GraphQL as the querying language.",
     image: wakeside,
-    link: {
-      name: 'View Live',
-      linkhref: 'https://reverent-montalcini-a70fee.netlify.app/'
-    }
+    links: [
+      {
+        name: 'View Live',
+        linkhref: 'https://reverent-montalcini-a70fee.netlify.app/',
+      },
+      {
+        name: "GitHub Repp",
+        linkhref:'https://github.com/madihara/wakeside'
+      }
+    ]
   },
   {
     date: '2019-2020',
-    description: 'Portfolio',
+    description: 'Old Portfolio',
     title: 'Portfolio',
     info: "A mobile responsive site designed and developed using CSS Modules and React.",
     image: portfolio,
+    links: [
+      {
+        name: 'GitHub Repo',
+        linkhref: 'https://github.com/madihara/portfolio'
+      }
+    ]
   },
   {
     date: '2019',
@@ -69,10 +88,12 @@ export const data = [
     title: 'CSS Art',
     info: "     While learning CSS I decided to take on a fun side project and make a pure CSS image of my dog.",
     image: css,
-    link: {
+    links: [
+      {
       name: 'CodePen',
       linkhref: 'https://codepen.io/madihara/pen/bGGPLBP'
     }
+  ],
   },
   {
     date: '2021',

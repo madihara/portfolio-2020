@@ -9,7 +9,7 @@ const About = () => {
     <Main>
       <FlexRow>
         <Title>madison <br></br> haradine</Title>
-        {/* <Description>Hey this will be the description</Description> */}
+        
       </FlexRow>
       
       <SubTitle>Freelance Frontend Developer</SubTitle>

@@ -48,4 +48,9 @@ const Link = styled.a`
   cursor: pointer;
   text-decoration: none;
   color: white;
+  transition: .3s;
+
+  &:hover{
+    transform: scale(1.1);
+  }
 `

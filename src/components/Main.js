@@ -38,12 +38,13 @@ const DataRender = () => {
               </Column>
             )) : null}
           </HiddenSection>
-          {item.link ? (
+          {item.links ? item.links.map((link) => (
+            
             <Link
             target="_blank" 
             active={active === index}
-            href={item.link.linkhref}>{item.link.name}</Link>
-          ) : null }
+            href={link.linkhref}>{link.name}</Link>
+          )) : null }
           </ColumnWork>
         ))}
 
