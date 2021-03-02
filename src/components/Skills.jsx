@@ -119,7 +119,7 @@ const Paragraph = styled.p`
 
   @media screen and (max-width: 900px) {
     padding: 0;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 `
 const Icon = styled.section`
@@ -127,7 +127,7 @@ const Icon = styled.section`
   font-size: 3rem;
 
   @media screen and (max-width: 750px) {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
 `
