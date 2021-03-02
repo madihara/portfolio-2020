@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Main = styled.div`
   height: 100vh;
-  width: 97%;
+  width: 97vw;
   
   display: flex;
   flex-direction: row;
@@ -11,6 +11,11 @@ export const Main = styled.div`
   padding: 0 2rem;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+    height: 100%;
+  }
 `
 export const ColumnWork = styled.section`
   width: 6%;
@@ -26,12 +31,6 @@ export const ColumnWork = styled.section`
   cursor: pointer;
   transition:.5s ease-out;
   position: relative;
-  /* -webkit-transform: rotate(270deg);   
-  -moz-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  transform: rotate(270deg); */
-
 
   ${({ active }) =>
     active &&
@@ -45,6 +44,12 @@ export const ColumnWork = styled.section`
     margin: 0 2rem;
    
   `}
+
+@media screen and (max-width: 750px) {
+    width: 70vw;
+    margin: 2rem 0;
+    
+  }
 `
 export const WorkTitle = styled.h1`
   color: black;
@@ -62,6 +67,15 @@ export const WorkTitle = styled.h1`
     active &&`
       display: none;
     `
+  }
+
+@media screen and (max-width: 900px) {
+  -webkit-transform: rotate(0deg);   
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition-delay:.2s;
   }
 `
 export const Description = styled.h3`
@@ -199,6 +213,10 @@ export const Scroll = styled.div`
   left: 47%;
   color: white;
   display: flex;
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
 `
 
 export const Dot = styled.section`

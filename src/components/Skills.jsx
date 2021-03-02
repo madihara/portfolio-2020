@@ -88,6 +88,14 @@ export const Wrapper = styled.div`
   color: white;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    padding: 1rem 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+  }
   
 `
 const FlexItem = styled.div`
@@ -97,12 +105,21 @@ const FlexItem = styled.div`
   height: 100%;
   align-items:  flex-start;
   justify-content: center;
+
+  @media screen and (max-width: 950px) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 `
 const Paragraph = styled.p`
   font-weight: thin;
   font-size: 1.1rem;
   padding: 0 2rem 0 0;
   margin-top: 0;
+
+  @media screen and (max-width: 900px) {
+    padding: 0;
+  }
 `
 const Icon = styled.section`
   padding: 0 15px 15px 15px;

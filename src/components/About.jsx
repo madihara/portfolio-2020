@@ -29,6 +29,10 @@ const Main = styled.div`
   padding: 6rem;
   color: white;
 
+  /* @media screen and (max-width: 900px) {
+    background: red;
+  } */
+
 `
 const FlexRow = styled.section`
   display: flex;
@@ -42,14 +46,15 @@ export const Title = styled.h2`
   margin:  0;
   color: white;
   line-height: 8.5rem;
+
+  @media screen and (max-width: 1300px) {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
   
   /* margin: 0; */
 `
-export const Description = styled.section`
-  padding: 3rem 0 0 3rem;
-  text-align: right;
 
-`
 const SubTitle = styled.h4`
   /* font-weight: normal; */
   font-size: 2rem;
@@ -58,4 +63,9 @@ const SubTitle = styled.h4`
   margin: 0;
   text-transform: uppercase;
   letter-spacing: .8rem;
+
+  @media screen and (max-width: 1300px) {
+    font-size: .8rem;
+    letter-spacing: .6rem;
+  }
 `
