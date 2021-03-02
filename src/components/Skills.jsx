@@ -83,7 +83,7 @@ export const Wrapper = styled.div`
 const FlexItem = styled.div`
   display: flex;
   flex-flow: row wrap ;
-  width: 50%;
+  width: 45%;
   height: 100%;
   align-items:  flex-start;
   justify-content: center;

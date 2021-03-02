@@ -13,7 +13,7 @@ export const Main = styled.div`
   align-items: center;
 `
 export const ColumnWork = styled.section`
-  width: 8%;
+  width: 6%;
   height: 80vh;
   background: white;
   margin: 10px;
@@ -36,11 +36,14 @@ export const ColumnWork = styled.section`
   ${({ active }) =>
     active &&
     `
-    width: 80vw;
-    color: red;
+    width: 60vw;
+    background-color: #383939;
     justify-content: flex-start;
     align-items:center;
     cursor: auto;
+    color: white;
+    margin: 0 2rem;
+   
   `}
 `
 export const WorkTitle = styled.h1`
@@ -51,6 +54,8 @@ export const WorkTitle = styled.h1`
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
   transition-delay:.2s;
+  width: 200px;
+  
 
 
   ${({active}) =>
@@ -72,24 +77,26 @@ export const Description = styled.h3`
   font-size: .7rem;
   width: 200px;
   margin: 60px 0;
-
+  display: none;
   
 
   ${({active}) =>
     active &&`
-      -webkit-transform: rotate(0deg);   
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      // position: absolute;
-      // top: 40px;
-      // left: 40px;
-      font-size: 3rem;
-      font-family: 'Abril Fatface', cursive;
-      width: 100%;
-      margin: 0;
-      padding: 0;
+      display: none;
+      // -webkit-transform: rotate(0deg);   
+      // -moz-transform: rotate(0deg);
+      // -ms-transform: rotate(0deg);
+      // -o-transform: rotate(0deg);
+      // transform: rotate(0deg);
+      // // position: absolute;
+      // // top: 40px;
+      // // left: 40px;
+      // font-size: 3rem;
+      // font-family: 'Abril Fatface', cursive;
+      // width: 100%;
+      // margin: 0;
+      // padding: 0;
+      // color: white;
     `
   }
   
@@ -97,9 +104,11 @@ export const Description = styled.h3`
 export const Date = styled(Description)`
   width: 80px;
   display: flex;
-  margin: 20px;
-  padding: 20px;
+  /* margin: 20px;
+  padding: 20px; */
   justify-content: flex-end;
+ 
+  /*  */
 
   ${({active}) =>
     active &&`
@@ -124,8 +133,10 @@ export const Image = styled.img`
   ${({active})=> 
   active &&`
     display: block;
-    width: 60%; 
-
+    width: 90%; 
+    max-height: 70%;
+    object-fit: cover;
+    border-radius: 5px;
   `}
 `
 
@@ -137,17 +148,17 @@ export const Info = styled.section`
   active &&`
     display: flex;
     color: black;
-    font-size: .8rem;
+    font-size: .9rem;
     width: 70%;
-    padding: 0;
+    padding: 2rem 0;
     margin: 0;
-
+    color: white;
   `}
 `
 
 export const Link = styled.a`
   display: none;
-  color: black;
+  color: white;
 
   ${({active}) => 
     active &&
@@ -161,7 +172,7 @@ export const HiddenSection = styled.section`
   ${({active}) => 
     active &&
     `display: flex;
-    color: black;
+    color: white;
     `
   }
 `

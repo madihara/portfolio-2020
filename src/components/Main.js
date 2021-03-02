@@ -7,7 +7,7 @@ import {data} from '../variables/Data'
 
 
 const DataRender = () => {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
   console.log(active)
   return(
     <>
@@ -23,7 +23,7 @@ const DataRender = () => {
           </div>
           <Wrapper active={active === index}>
             <Description active={active === index}>{item.description}</Description>
-            <WorkTitle active={active === index} >{item.title}</WorkTitle>`
+            <WorkTitle active={active === index} >{item.title}</WorkTitle>
 
           </Wrapper>
           {item.image ? <Image active={active === index} src={item.image} /> : null}
@@ -58,7 +58,6 @@ const DataRender = () => {
       )
     })}
     </Scroll>
-    {/* <div style={{color: 'red', position: 'absolute', bottom: '0', fontSize:'3rem'}}>SITE IS UNDER CONSTRUCTION</div> */}
     </div>
     </>
   )
