@@ -14,13 +14,7 @@ const Skills = () => {
     <Wrapper>
       <FlexItem style={{justifyContent: 'flex-start'}}>
         <Paragraph>
-          I am a frontend developer passionate about making mobile responsive websites with clean design. I am entirely self-taught and pride myself on my discipline, motivation, and ability to transform a plain HTML document to a fully functioning, beautiful website.
-        </Paragraph>
-      
-        <Paragraph>
-          I am primarily a frontend javascript engineer, but dabble in backend technologies from time to time.  I love React, CSS-in-JS such as styled components, GraphQL, and playing around with CSS to find designs that are striking yet responsive.  I have a strong desire to learn d3js and expand my knowledge of node and databases. 
-        </Paragraph>
-        <Paragraph>I am currently accepting freelance work as well as offers for fulltime positions.  Please get in touch with me via email, text or call, or reach out to me on twitter!
+    I am currently a lead Frontend Engineer at Viewrail building out our internal administrative and sales softwares with a focus on tooling that simplifies our process from first customer contact through final sale and installation.
 
         </Paragraph>
         <Link
